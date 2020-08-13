@@ -17,7 +17,7 @@ public class UserServerImpl implements UserServer {
     @Autowired
     UserMapper userMapper;
     @Override
-    public UserPo getUserById(String userId) {
-        return userMapper.getUserById(userId);
+    public UserPo getUserByName(String name) {
+        return userMapper.getUserByName(name);
     }
 }

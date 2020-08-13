@@ -3,5 +3,5 @@ package com.ants.orchid.server.api;
 import com.ants.orchid.pojo.domain.UserPo;
 
 public interface UserServer {
-    public UserPo getUserById(String userId);
+    public UserPo getUserByName(String userId);
 }

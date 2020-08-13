@@ -9,5 +9,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserMapper {
-    public UserPo getUserById(String userId);
+    public UserPo getUserByName(String name);
 }

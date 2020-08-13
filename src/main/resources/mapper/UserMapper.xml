@@ -14,7 +14,7 @@
     <sql id="baseSql" >
         user_id,password,name
     </sql>
-    <select id="getUserById" resultMap="BaseResultMap">
-        select <include refid="baseSql" /> from user where user_id=#{userId}
+    <select id="getUserByName" resultMap="BaseResultMap">
+        select <include refid="baseSql" /> from user where name=#{name}
     </select>
 </mapper>

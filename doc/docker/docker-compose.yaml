@@ -1,0 +1,22 @@
+version: '3.1'
+services: 
+    orchid:
+       build: 
+         context: ./../orchid
+         dockerfile: orchiddockerfile
+       image: orchid
+       container_name: orchid
+       restart: always
+       networks: 
+         - nets
+       volumes: 
+         - ./orchid.log:/usr/src/myapp/orchid.log
+       ports: 
+         - 1314:1314
+       environment: 
+         - JAVA_OPTS=-Xmx256M -Dspring.profiles.active=test -Duser.timezone=GMT+08
+   
+networks: 
+    nets:   
+      external: false    
+

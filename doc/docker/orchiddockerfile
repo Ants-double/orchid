@@ -1,0 +1,6 @@
+FROM java:8u111
+LABEL create=lyy
+COPY orchid-0.0.1.jar /usr/src/myapp/orchid.jar
+WORKDIR /usr/src/myapp
+EXPOSE 1314
+CMD java -jar /usr/src/myapp/orchid.jar
