@@ -13,7 +13,7 @@ spring:
     name: orchid
   datasource:
     druid:
-      url: jdbc:mysql://localhost:3309/orchid?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
+      url: jdbc:mysql://119.45.7.127:3309/orchid?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
       username: root
       password: 456123
       initial-size: 1
