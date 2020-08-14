@@ -5,8 +5,7 @@ services:
          context: ./../orchid
          dockerfile: orchiddockerfile
        image: orchid
-       container_name: orchid
-       restart: always
+       container_name: orchid       
        networks: 
          - nets
        volumes: 
