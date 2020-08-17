@@ -10,7 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableCaching
 @SpringBootApplication
 @EnableTransactionManagement
-/// @EnableSwagger2
+@EnableSwagger2
 @MapperScan(basePackages = "com.ants.orchid.mapper")
 public class OrchidApplication {
 
