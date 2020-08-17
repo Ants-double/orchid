@@ -32,16 +32,17 @@ public class WebAppConfig implements WebMvcConfigurer {
     /**
      * 注册 拦截器
      */
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        // 设置拦截的路径、不拦截的路径、优先级等等
-        registry.addInterceptor(sessionInterceptor).excludePathPatterns("/favicon.ico").addPathPatterns("/**").addPathPatterns("/*")
-                .excludePathPatterns("/api/user/login")
-                .excludePathPatterns("/api/user/loginOut")
-        .excludePathPatterns("/home")
-                .excludePathPatterns("/index.html")
-                .excludePathPatterns("index.html")
-        .excludePathPatterns("/static/**");
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        // 设置拦截的路径、不拦截的路径、优先级等等
+//        registry.addInterceptor(sessionInterceptor).excludePathPatterns("/favicon.ico").addPathPatterns("/**").addPathPatterns("/*")
+//                .excludePathPatterns("/api/user/login")
+//                .excludePathPatterns("/api/user/loginOut")
+//                .excludePathPatterns("/api/swagger-ui.html")
+//        .excludePathPatterns("/home")
+//                .excludePathPatterns("/index.html")
+//                .excludePathPatterns("index.html")
+//        .excludePathPatterns("/static/**");
+//    }
 
 }

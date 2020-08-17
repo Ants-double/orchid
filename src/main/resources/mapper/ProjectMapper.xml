@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ants.orchid.mapper.ProjectMapper">
+
+    <resultMap id="BaseResultMap" type="com.ants.orchid.pojo.domain.ProjectPo">
+
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
+        <result column="project_name" property="projectName"/>
+        <result column="add_name" property="addName"/>
+        <result column="project_scan" property="projectScan"/>
+        <result column="project_charge" property="projectCharge"/>
+        <result column="project_type" property="projectType"/>
+
+
+    </resultMap>
+
+    <sql id="baseSql">
+        id,gmt_create,gmt_modified,project_name,add_name,project_scan,project_charge,project_type
+    </sql>
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="com.ants.orchid.pojo.domain.ProjectPo">
+      insert  into project (gmt_create,project_name,add_name,project_scan,project_charge,project_type) values
+      (now(),#{projectName},#{addName},#{projectScan},#{projectCharge},#{projectType})
+
+    </insert>
+    <select id="getAll" resultMap="BaseResultMap">
+        select <include refid="baseSql"></include>
+        from  project
+    </select>
+</mapper>

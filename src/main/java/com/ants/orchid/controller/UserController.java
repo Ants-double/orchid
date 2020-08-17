@@ -3,6 +3,8 @@ package com.ants.orchid.controller;
 import com.ants.orchid.pojo.domain.UserPo;
 import com.ants.orchid.server.api.UserServer;
 import com.antsdouble.util.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import javafx.util.Pair;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,7 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping(value = "/user")
+@Api(tags = "用户相关接口")
 public class UserController {
 
     @Autowired
@@ -35,6 +38,7 @@ public class UserController {
         UserPo userByName = userServer.getUserByName(name);
         return  Result.success(userByName);
     }
+    @ApiOperation("用户登录接口")
     @GetMapping(value = "login")
     public Result login(@RequestParam(value = "name",required = true)String name,
                         @RequestParam(value = "password",required = true)String password){

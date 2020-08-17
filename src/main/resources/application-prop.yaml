@@ -43,3 +43,5 @@ spring:
 #    protocol: smtp
 #    default-encoding: UTF-8
 #    port: 25
+swagger2:
+  enable: false
