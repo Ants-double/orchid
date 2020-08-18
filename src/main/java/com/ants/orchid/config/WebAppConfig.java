@@ -43,8 +43,10 @@ public class WebAppConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/v2/api-docs")
                 .excludePathPatterns("/webjars/**")
                 .excludePathPatterns("/home")
+                .excludePathPatterns("/api/home")
                 .excludePathPatterns("/index.html")
-                .excludePathPatterns("index.html")
+                .excludePathPatterns("/api/index.html")
+                .excludePathPatterns("/api/static/**")
                 .excludePathPatterns("/static/**");
     }
 
